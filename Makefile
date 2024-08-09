@@ -333,7 +333,8 @@ GENFLAGS	+=	$(firmware-genflags-y)
 
 CFLAGS		=	-g -Wall -Werror -ffreestanding -nostdlib -fno-stack-protector -fno-strict-aliasing
 ifneq ($(DEBUG),)
-CFLAGS		+=	-O0
+#CFLAGS		+=	-O0
+CFLAGS		+=	-O1
 else
 CFLAGS		+=	-O2
 endif

@@ -68,7 +68,7 @@ static int sophgo_wdt_system_get_top_base(void *fdt,
 		 int nodeoff, unsigned long *addr)
 {
 	const fdt32_t *val;
-	int len, noff;
+	int len, noff = 0;
 
 	val = fdt_getprop(fdt, nodeoff, "subctrl-syscon", &len);
 	if (val || len >= sizeof(fdt32_t)) {
